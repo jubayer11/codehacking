@@ -22,7 +22,7 @@
              <td>{{$post->id}}</td>
                <td><img height="100px" src=" {{ URL::to('/') }}/images/{{$post->photo ? $post->photo['file']: 'no user photo'}}" alt="no photo"></td>
              <td>{{$post->user->name}}</td>
-             <td>{{$post->category_id}}</td>
+             <td>{{$post->category ? $post->category->name :'notcategorized'}}</td>
                <td> {{$post->title}}</td>
                <td>{{$post->body}}</td>
                <td>{{$post->created_at->diffForhumans()}}</td>
